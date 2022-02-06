@@ -10,19 +10,19 @@ import javax.persistence.Id;
 import com.example.SigaBemTeste.util.PegarCEP;
 
 
-@Entity
+
 public class DadosProcessadosModel {
 	private @Id @GeneratedValue (strategy = GenerationType.IDENTITY) Long idDados;
 	private double vlTotalFrete, peso;
 	private Date dataPrevistaEntrega;
 	private int dataConsulta;
-	private String cepOrigem, cepDestino;
+	private String cepOrigem, cepDestino, nomeDestinatario;
 
-	public DadosProcessadosModel processarDados(double peso, String cepDeOrigem, String cepDeDestino) {
+	public void DadosProcessadosModel processarDados(float peso, String cepDeOrigem, String cepDeDestino, String nomeDestinatario) {
 		
 		
-	
-		DadosProcessadosModel dados = new DadosProcessadosModel().processarDados(peso, cepDeOrigem, cepDeDestino);
+		ClienteModel cliente = new ClienteModel();
+		DadosProcessadosModel dados = new DadosProcessadosModel().processarDados(peso, cepDeOrigem, cepDeDestino, nomeDestinatario);
 		
 		
 		PegarCEP pegar = new PegarCEP();
@@ -42,6 +42,7 @@ public class DadosProcessadosModel {
 			this.vlTotalFrete = (peso * 0.5);
 			this.dataConsulta = dateConsulta.getDate();
 			this.dataPrevistaEntrega = dateEntrega1;
+			this.nomeDestinatario = nomeDestinatario;
 
 		}
 
@@ -50,6 +51,7 @@ public class DadosProcessadosModel {
 			this.vlTotalFrete = (peso * 0.75);
 			this.dataConsulta = dateConsulta.getDate();
 			this.dataPrevistaEntrega = dateEntrega2;
+			this.nomeDestinatario = nomeDestinatario;
 
 		}
 
@@ -58,15 +60,17 @@ public class DadosProcessadosModel {
 			this.vlTotalFrete = peso;
 			this.dataConsulta = dateConsulta.getDate();
 			this.dataPrevistaEntrega = dateEntrega3;
+			this.nomeDestinatario = nomeDestinatario;
 		}
 
-		System.out.printf("Frete total: " , this.vlTotalFrete);
+		/*System.out.printf("Frete total: " , this.vlTotalFrete);
 		System.out.printf("CEP do Cliente :" ,cepDeOrigem);
 		System.out.printf("CEP de Destino: " , cepDeDestino);
 		System.out.printf("Data prevista de entrega :" ,this.dataPrevistaEntrega);
-		System.out.printf("Data prevista de entrega :" ,this.dataConsulta);
+		System.out.printf("Data prevista de entrega :" ,this.dataConsulta);*/
 		
-		return dados;
+		System.out.print(pegar.getMapPorCep(cepDeOrigem));
+		System.out.print(pegar2.getMapPorCep(cepDeDestino));
 		
 	}
 	
