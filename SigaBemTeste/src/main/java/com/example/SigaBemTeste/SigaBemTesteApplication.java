@@ -24,11 +24,17 @@ public class SigaBemTesteApplication {
 		CEPModel cm = new CEPModel();
 		
 		String lercep = read.next();
+		String lercep2 = read.next();
 		
 		cep.getEnderecoPorCep(lercep);
+		cep.getEnderecoPorCep(lercep2);
+		
+		/*System.out.println (cep.getEnderecoPorCep(lercep));
+		System.out.println (cm.getBairro());*/
+		
 		
 		System.out.println (cep.getEnderecoPorCep(lercep));
-		System.out.println (cm.getBairro());
+		System.out.println (cep.getEnderecoPorCep(lercep2));
 		
 	}
 }
