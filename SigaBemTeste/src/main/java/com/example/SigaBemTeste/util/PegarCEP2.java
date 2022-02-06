@@ -31,8 +31,8 @@ public class PegarCEP2 {
 		    "unidade",
 		    "ibge",
 		    "gia",
-		    "siafi",
-		    "ddd"
+		    "ddd",
+		    "siafi"
 		    ));
 
 		    
@@ -52,11 +52,10 @@ public class PegarCEP2 {
 		                    .setBairro(jsonObject.getString("bairro"))
 		                    .setLocalidade(jsonObject.getString("localidade"))
 		                    .setUf(jsonObject.getString("uf"))
-		                    .setUnidade(jsonObject.getString("unidade"))
 		                    .setIbge(jsonObject.getString("ibge"))
 		                    .setGia(jsonObject.getString("gia"))
 		                    .setDdd(jsonObject.getString("ddd"))
-		                    .setSiafi(jsonObject.getString("gia"));
+		                    .setSiafi(jsonObject.getString("siafi"));
 		            
 
 		        }

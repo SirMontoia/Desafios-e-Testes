@@ -96,8 +96,8 @@ public class ProcessamentoDados {
 		Date dateEntrega2 = new Date(dateConsulta.getTime() + (3000 * 180 * 180 * 72));
 		Date dateEntrega3 = new Date(dateConsulta.getTime() + (10000 * 600 * 600 * 240));
 
-		pegar.getMapPorCep(cepDeOrigem);
-		pegar2.getMapPorCep(cepDeDestino);
+		pegar.getEnderecoPorCep(cepDeOrigem);
+		pegar2.getEnderecoPorCep(cepDeDestino);
 
 		if (cep.getDdd() == cep2.getDdd()) {
 
@@ -134,13 +134,7 @@ public class ProcessamentoDados {
 			this.cepDestino = cepDeDestino;
 		}
 
-		/*
-		 * System.out.printf("Frete total: " , this.vlTotalFrete);
-		 * System.out.printf("CEP do Cliente :" ,cepDeOrigem);
-		 * System.out.printf("CEP de Destino: " , cepDeDestino);
-		 * System.out.printf("Data prevista de entrega :" ,this.dataPrevistaEntrega);
-		 * System.out.printf("Data prevista de entrega :" ,this.dataConsulta);
-		 */
+		
 
 		System.out.print(pegar.getMapPorCep(cepDeOrigem));
 		System.out.print(pegar2.getMapPorCep(cepDeDestino));

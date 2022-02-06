@@ -132,6 +132,8 @@ public class CEPModel2 {
                 ", unidade='" + unidade + '\'' +
                 ", ibge='" + ibge + '\'' +
                 ", gia='" + gia + '\'' +
+                ", siafi='" + siafi + '\'' +
+	            ", ddd='" + ddd + '\'' +
                 '}';
 
 }

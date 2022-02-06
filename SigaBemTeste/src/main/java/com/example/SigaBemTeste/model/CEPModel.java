@@ -1,9 +1,5 @@
 package com.example.SigaBemTeste.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 
 public class CEPModel {
@@ -130,7 +126,10 @@ public class CEPModel {
 
 		@Override
 	    public String toString() {
-	        return "Endereco{" +
+	        
+			
+			
+			return "Endereco{" +
 	                "cep='" + cep + '\'' +
 	                ", logradouro='" + logradouro + '\'' +
 	                ", complemento='" + complemento + '\'' +
@@ -140,6 +139,8 @@ public class CEPModel {
 	                ", unidade='" + unidade + '\'' +
 	                ", ibge='" + ibge + '\'' +
 	                ", gia='" + gia + '\'' +
+	                ", siafi='" + siafi + '\'' +
+	                ", ddd='" + ddd + '\'' +
 	                '}';
 	
 }

@@ -5,7 +5,7 @@ import java.util.Scanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
+import com.example.SigaBemTeste.model.CEPModel;
 import com.example.SigaBemTeste.util.PegarCEP;
 import com.example.SigaBemTeste.util.PegarCEP2;
 import com.example.SigaBemTeste.util.ProcessamentoDados;
@@ -21,14 +21,14 @@ public class SigaBemTesteApplication {
 		
 		
 		PegarCEP cep = new PegarCEP();
+		CEPModel cm = new CEPModel();
 		
 		String lercep = read.next();
 		
-		cep.getMapPorCep(lercep);
-		PegarCEP.getEnderecoPorCep(lercep);
+		cep.getEnderecoPorCep(lercep);
 		
-		System.out.println (cep.getMapPorCep(lercep));
-		System.out.println (PegarCEP.getEnderecoPorCep(lercep));
+		System.out.println (cep.getEnderecoPorCep(lercep));
+		System.out.println (cm.getBairro());
 		
 	}
 }
