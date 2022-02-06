@@ -24,7 +24,7 @@ public class ClienteModel {
 	private String nomeDestinatario;
 	private double vlTotalFrete;
 	private Date dataPrevistaEntrega;
-	private int dataConsulta;
+	private Date dataConsulta;
 
 	
 	
@@ -87,12 +87,14 @@ public class ClienteModel {
 		this.dataPrevistaEntrega = dataPrevistaEntrega;
 	}
 
-	public int getDataConsulta() {
+	public Date getDataConsulta() {
 		return dataConsulta;
 	}
 
-	public void setDataConsulta(int dataConsulta) {
-		this.dataConsulta = dataConsulta;
+	
+
+	public void setDataConsulta(Date dataConsulta2) {
+		this.dataConsulta = dataConsulta2;		
 	}
 
 }
